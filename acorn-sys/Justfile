@@ -1,0 +1,18 @@
+build_and_run:
+  docker build -t acorn-sys .
+  docker run \
+      -v ./:/acorn-sys \
+      acorn-sys
+
+run:
+  docker run \
+      -v ./:/acorn-sys \
+      acorn-sys
+
+dev:
+  docker run \
+      -it \
+      -v ./:/acorn-sys \
+      acorn-sys \
+      bash
+
